@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Basic Calendar Demo</title>
+
+    <!-- Bootstrap -->
+      
+    <!-- Latest compiled and minified CSS -->
+       <link rel="stylesheet"    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+
+      <!-- Optional theme -->
+      
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> 
+      
+       <link href="navbar-fixed-top.css" rel="stylesheet">
+
+      
+ <style>
+     body { padding-top: 70px; }
+     
+     .cal-container {
+         margin-bottom: 20px;
+        
+     }
+     
+     .calendar {
+         margin-bottom: 20px;
+         
+     }
+     
+     .calendar:hover {
+         cursor: pointer;
+     }
+     
+     .calendar-title {
+        text-align: center;
+     }
+     
+     td, th {
+        padding: 5px;
+     }
+     
+     .quarter-lbl {
+         margin: 20px 0 20px 20px; 
+         color: #333333;
+         font-weight: bold;
+     }
+     
+     .selected-month {
+         background-color: #eeeeee;
+     }
+      
+     .selected-day {
+        color: red;
+        font-weight: bold;
+     }
+     
+     #month-view {
+         display: none;
+         margin-top: 100px;
+     }
+
+ </style>     
+      
+          
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+       <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Calendar Demo</a>
+        </div>
+          
+        <div id="navbar">
+          <ul class="nav navbar-nav">
+            <li id="year-link" class="active"><a href="#">Year</a></li>
+            <li id="month-link"><a href="#">Month</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      
+   <!-- Start Calendars --------------------------------------------------->   
+      
+      <div id="month-view">
+        <div class="container calendar">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <input id="last-month" class="btn btn-default" type="button" value="Last">
+                    <input id="next-month" class="btn btn-default pull-right" type="button" value="Next">
+                </div>
+            </div>
+        </div>
+        <div class="container cal-container">
+            <div class="row">
+                <div id="cal-month" class="calendar col-md-6 col-md-offset-3"></div>   
+            </div>
+        </div>
+      </div>
+      
+      <div id="year-view" class="cal-display">
+          <div class="container cal-container">
+            <div class="row">
+                <h2 class="quarter-lbl">First Quarter</h2>
+                <div id="cal-jan" class="calendar col-md-4"></div>
+                <div id="cal-feb" class="calendar col-md-4"></div>
+                <div id="cal-mar" class="calendar col-md-4"></div>
+            </div>
+          </div>
+
+          <div class="container cal-container">
+            <div class="row">
+                <h2 class="quarter-lbl">Second Quarter</h2>
+                <div id="cal-april" class="calendar col-md-4"></div>
+                <div id="cal-may" class="calendar col-md-4"></div>
+                <div id="cal-jun" class="calendar col-md-4"></div>
+              </div>
+          </div>
+
+          <div class="container cal-container">   
+            <div class="row">
+                <h2 class="quarter-lbl">Third Quarter</h2>
+                <div id="cal-july" class="calendar col-md-4"></div>
+                <div id="cal-aug" class="calendar col-md-4"></div>
+                <div id="cal-sept" class="calendar col-md-4"></div>
+            </div>
+          </div>
+
+          <div class="container cal-container">
+            <div class="row">
+                <h2 class="quarter-lbl">Fourth Quarter</h2>
+                <div id="cal-oct" class="calendar col-md-4"></div>
+                <div id="cal-nov" class="calendar col-md-4"></div>
+                <div id="cal-dec" class="calendar col-md-4"></div>
+            </div>
+          </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+            <p class="text-muted"><a href="http://www.gregorydavis.website" target="_blank">Gregory Davis</a></p>
+        </div>
+      </footer>
+      
+    <!-- Latest compiled and minified JavaScript -->
+      <script   src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">  </script>   
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="calendar.js"></script>
+      
+    <script type="text/javascript">
+        $(document).ready(yearView());
+        
+    </script>
+    
+  </body>
+</html>
