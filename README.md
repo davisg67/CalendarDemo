@@ -9,3 +9,6 @@ Month views have a Last Month and Next Month buttons.
 Month view calendar can be clicked on any day to return the full date in an alert.
 
 Should be useful for anyone looking into where to start on their own calendar projects.
+
+See this demo hosted at - http://79.170.40.37/gregdstestdomain.com/calendar/
+View my portfolio of other projects at: www.gregorydavis.website 
